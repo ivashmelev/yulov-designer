@@ -1,0 +1,88 @@
+@import "src/UI.module";
+
+.wrapper {
+  max-width: 926px;
+  width: 100%;
+  height: 860px;
+  background-color: $purple-color;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.title {
+  @extend .text_black;
+  position: relative;
+  line-height: 144px;
+  left: -67px;
+  height: 288px;
+  margin-top: 155px;
+  display: flex;
+}
+
+.link_white {
+
+  left: 591px;
+  top: 36px;
+  position: relative;
+  height: 22px;
+  line-height: 11px;
+  z-index: 150;
+
+
+  &:after {
+    width: 110%;
+    content: '';
+    top: 10px;
+    background-color: $white-color;
+  }
+}
+
+.block_wrapper {
+  display: flex;
+  margin-top: 200px;
+}
+
+.block {
+  &:nth-child(1) {
+    max-width: 335px;
+    width: 100%;
+    margin-left: 118px;
+  }
+
+  &:nth-child(2) {
+    max-width: 197px;
+    width: 100%;
+    margin-left: 128px;
+  }
+}
+
+.head {
+  @extend .text_bold;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.text {
+  @extend .text;
+}
+
+.link_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  & > a:hover {
+    color: $white-color;
+  }
+}
+
+.line {
+  background-color: $black-color;
+  max-width: 570px;
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  position: absolute;
+}

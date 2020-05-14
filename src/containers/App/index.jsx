@@ -7,6 +7,7 @@ import Background from "../../components/Background";
 import styles from './App.module.scss';
 import Header from "../../components/Header";
 import Navigation from "../../components/Navigation";
+import About from "../About";
 
 const App = memo(() => {
 
@@ -22,6 +23,7 @@ const App = memo(() => {
                 <div className={styles.Wrapper}>
                     <Header />
                     <Navigation />
+                    <About />
                 </div>
                 {/*<div style={{width: '100%', height: '100%', display: 'flex'}}>*/}
                 {/*    <Background />*/}

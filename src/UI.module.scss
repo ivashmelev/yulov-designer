@@ -1,6 +1,7 @@
 /* COLORS */
 $purple-color: #DD94FF;
 $black-color: #424242;
+$white-color: #FFFFFF;
 
 /* FONTS */
 @font-face {
@@ -16,6 +17,11 @@ $black-color: #424242;
 @font-face {
   font-family: "Gotham Pro Bold";
   src: url('static/fonts/GothamPro/GothamPro-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Gotham Pro Black";
+  src: url('static/fonts/GothamPro/GothamPro-Black.ttf');
 }
 
 /* TEXT */
@@ -37,11 +43,18 @@ $black-color: #424242;
   color: $black-color;
 }
 
+.text_black {
+  font-family: "Gotham Pro Black", sans-serif;
+  color: $black-color;
+  font-size: 150px;
+}
+
 /* LINKS */
 a {
   @extend .text_medium;
   text-decoration: none;
   width: max-content;
+  display: block;
 
   &:after {
     width: 0;
