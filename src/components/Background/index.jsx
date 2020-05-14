@@ -1,6 +1,6 @@
 import React, {memo} from "react";
 import styles from './Background.module.scss';
-import Video from '../../static/bg_w.mp4';
+import Video from '../../static/videos/bg_w.mp4';
 
 const Background = memo(() => {
 

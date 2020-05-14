@@ -1,0 +1,26 @@
+@import "src/UI.module";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 70px;
+  height: 60px;
+  position: relative;
+}
+
+.title_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.title {
+  @extend .text_bold;
+  font-size: 24px;
+}
+
+.subtitle {
+  @extend  .text_medium;
+  font-size: 24px;
+}

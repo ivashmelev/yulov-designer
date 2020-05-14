@@ -1,0 +1,54 @@
+@import "src/UI.module";
+
+.wrapper {
+  position: sticky;
+  top: 200px;
+  width: 100%;
+  margin-top: 71px;
+}
+
+.block_wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 53px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:nth-child(2) {
+    justify-content: space-evenly;
+  }
+}
+
+.link {
+  line-height: 11px;
+  height: 16px;
+
+  &.active {
+    &:after {
+      width: 0;
+      content: '-';
+      height: 2px;
+      display: block;
+      position: relative;
+      background-color: $black-color;
+      top: -10px;
+      left: 105%;
+      transition: width .3s cubic-bezier(.77,0,.175,1);
+    }
+  }
+
+  &:hover {
+    &:after{
+      width: 0;
+    }
+  }
+}
+
+.label {
+  @extend .text_medium;
+  text-align: end;
+}
