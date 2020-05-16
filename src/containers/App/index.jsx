@@ -51,6 +51,7 @@ const App = memo(() => {
                                 {list.map((element, index) => {
                                     if (index % 2 === 0) {
                                         return (
+
                                             <div className={'section'} key={index}>
                                                 <a name={'portfolio'}/>
                                                 <Element  index={index} {...element} />

@@ -27,6 +27,11 @@ const About = memo(() => {
                 </div>
                 <Networks config={networksConfig} />
             </div>
+            {/*<div className={styles.portfolio_wrapper}>*/}
+            {/*    <span className={styles.title}>*/}
+            {/*        Port-folio*/}
+            {/*    </span>*/}
+            {/*</div>*/}
         </div>
     )
 });

@@ -14,7 +14,7 @@
   @extend .text_black;
   position: relative;
   line-height: 144px;
-  left: -67px;
+  left: -7.3%;
   height: 288px;
   margin-top: 155px;
   display: flex;
@@ -80,3 +80,12 @@
   position: absolute;
 }
 
+.portfolio_wrapper {
+  margin-top: 100px;
+
+  & .title {
+    max-width: 390px;
+    width: 100%;
+    left: 67.8%;
+  }
+}

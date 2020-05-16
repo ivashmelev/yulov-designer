@@ -1,0 +1,22 @@
+@import "../../UI.module";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  right: 20px;
+  justify-content: flex-end;
+  margin-top: 30px;
+
+  & > a, span {
+    @extend .text;
+  }
+
+  & > a:hover {
+
+    color: $purple-color;
+    &:after {
+      width: 0;
+    }
+  }
+}

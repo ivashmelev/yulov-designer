@@ -2,6 +2,7 @@ import React, {memo} from 'react';
 import styles from './Contacts.module.scss';
 import Networks from "../../components/Networks";
 import networksConfig from "../../configs/networks-config";
+import CreatedBy from "../../components/CreatedBy";
 
 const Contacts = memo(({phone, mail}) => {
     return (
@@ -28,6 +29,9 @@ const Contacts = memo(({phone, mail}) => {
                     </a>
                     <div className={styles.network_wrapper}>
                         <Networks config={networksConfig} />
+                    </div>
+                    <div>
+                        <CreatedBy />
                     </div>
                 </div>
             </div>

@@ -1,4 +1,25 @@
+@import "../../UI.module";
+
 .Wrapper {
-  margin: 0 20px;
+  margin: 0 0 0 20px;
   overflow-x: hidden;
+}
+
+.portfolio_wrapper {
+  height: 526px;
+  width: 926px;
+  background-color: $purple-color;
+  margin: 0 auto;
+
+  & .title {
+    @extend .text_black;
+    position: relative;
+    line-height: 144px;
+    max-width: 390px;
+    width: 100%;
+    left: 67.8%;
+    height: 288px;
+    margin-top: 155px;
+    display: flex;
+  }
 }
