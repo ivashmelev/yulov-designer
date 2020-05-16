@@ -3,9 +3,11 @@
 .wrapper {
   width: 100%;
   display: flex;
-  margin-top: 70px;
+  //margin-top: 70px;
+  top: 5%;
   height: 60px;
-  position: relative;
+  position: fixed;
+  z-index: 200;
 }
 
 .title_wrapper {

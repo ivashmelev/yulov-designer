@@ -2,6 +2,8 @@ import React, {memo, useState} from 'react';
 import styles from './Element.module.scss';
 import {Link} from "react-router-dom";
 import './animation_img.scss'
+import Networks from "../Networks";
+import networksConfig from "../../configs/networks-config";
 
 const Element = memo(({title, subtitle, index, img, description, right, link}) => {
 
@@ -48,21 +50,7 @@ const Element = memo(({title, subtitle, index, img, description, right, link}) =
                                 </Link>
                             </div>
                             <div className={styles.soc_wrapper}>
-                                <span className={styles.head}>
-                                    Социальные сети —
-                                </span>
-                                <span className={styles.text}>
-                                    подписывайтесь на мои соц. сети
-                                </span>
-                                <div className={styles.block_link}>
-                                    <Link to={'#'}>
-                                        Behance
-                                    </Link>
-                                    <Link to={'#'}>
-                                        Instagram
-                                    </Link>
-                                </div>
-                                <div className={styles.line} />
+                                <Networks config={networksConfig}/>
                             </div>
                         </div>
                     </div>

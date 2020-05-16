@@ -27,7 +27,7 @@
   position: relative;
   height: 22px;
   line-height: 11px;
-  z-index: 150;
+  z-index: 250;
 
 
   &:after {
@@ -44,17 +44,10 @@
 }
 
 .block {
-  &:nth-child(1) {
     max-width: 335px;
     width: 100%;
     margin-left: 118px;
-  }
-
-  &:nth-child(2) {
-    max-width: 197px;
-    width: 100%;
-    margin-left: 128px;
-  }
+    margin-right: 128px;
 }
 
 .head {
@@ -86,3 +79,4 @@
   margin-top: 20px;
   position: absolute;
 }
+

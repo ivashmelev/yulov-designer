@@ -1,6 +1,8 @@
 import React, {memo} from 'react';
 import styles from './About.module.scss';
 import {Link} from "react-router-dom";
+import Networks from "../../components/Networks";
+import networksConfig from "../../configs/networks-config";
 
 const About = memo(() => {
 
@@ -23,20 +25,7 @@ const About = memo(() => {
                         На протяжении всего этого времени занимался самообразованием в digital-дизайне.
                     </span>
                 </div>
-                <div className={styles.block}>
-                    <span className={styles.head}>
-                        Социальные сети -
-                    </span>
-                    <span className={styles.text}>
-                        подписывайтесь на мои <br/> соц. сети
-                    </span>
-                    <div className={styles.link_wrapper}>
-                        <Link to={'#'}>Behance</Link>
-                        <Link to={'#'}>Instagram</Link>
-                        <Link to={'#'}>vk.com</Link>
-                    </div>
-                    <div className={styles.line} />
-                </div>
+                <Networks config={networksConfig} />
             </div>
         </div>
     )
