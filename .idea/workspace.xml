@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4fb3aa51-5181-426c-b3e3-23a522acc97b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bqnsGEH9YV6vbNzRz4Wd50kST9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/static/img" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\src\static\img" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\public\images\project" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\src\configs" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\public\images" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\src\static\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\public\images\preview" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\src\configs" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\src\containers" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\src\static\videos" />
+      <recent name="C:\Users\ishme\Desktop\Work\yulov-designer\src\components\Background" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fb3aa51-5181-426c-b3e3-23a522acc97b" name="Default Changelist" comment="" />
+      <created>1589368700773</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589368700773</updated>
+      <workItem from="1589368729754" duration="7369000" />
+      <workItem from="1589379258394" duration="5278000" />
+      <workItem from="1589386922735" duration="2223000" />
+      <workItem from="1589442367923" duration="636000" />
+      <workItem from="1589443056997" duration="20406000" />
+      <workItem from="1589522853327" duration="38520000" />
+      <workItem from="1589620714021" duration="592000" />
+      <workItem from="1589633519280" duration="18130000" />
+      <workItem from="1589874468723" duration="86000" />
+    </task>
+    <task id="LOCAL-00001" summary="add cra">
+      <created>1589371669206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589371669206</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Router, Background">
+      <created>1589444113078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589444113078</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Header, Navigation, UI">
+      <created>1589451076222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589451076222</updated>
+    </task>
+    <task id="LOCAL-00004" summary="About">
+      <created>1589458473500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589458473500</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Element">
+      <created>1589543103565</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589543103565</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Contacts">
+      <created>1589636492335</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589636492336</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created by">
+      <created>1589640460656</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589640460656</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Sidebar">
+      <created>1589874552264</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589874552265</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add cra" />
+    <MESSAGE value="Router, Background" />
+    <MESSAGE value="Header, Navigation, UI" />
+    <MESSAGE value="About" />
+    <MESSAGE value="Element" />
+    <MESSAGE value="Contacts" />
+    <MESSAGE value="Created by" />
+    <MESSAGE value="Sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sidebar" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589545598078">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1589545598078" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1589874556071">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589874556071" />
+    <state x="405" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589374544605">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="405" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1589374544605" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1589525749038">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1589525749038" />
+  </component>
+</project>

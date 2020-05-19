@@ -52,14 +52,22 @@
   margin-top: 40px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1290px) {
+@media only screen and (min-width: 719px) and (max-width: 1290px) {
   .wrapper {
     max-width: 460px;
-    margin-top: 50px;
+    margin-top: 120px;
+    height: 677px;
+  }
+
+  .title {
+    max-width: 255px;
+    font-size: 10rem;
+    margin-top: 60px;
+    line-height: 96px;
   }
 
   .contacts_wrapper {
-    margin-top: 78px;
+    margin-top: 38px;
   }
 
   .link_wrapper {

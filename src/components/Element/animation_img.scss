@@ -31,24 +31,53 @@
       top: -50%;
     }
   }
+
   .reflection-grid-cell {
     position: absolute;
     z-index: 1;
     width: 10%;
     height: 10%;
   }
+
   @for $r from 1 to 11 {
     @for $c from 1 to 11 {
       .reflection-grid-cell-#{( ($r*10) + $c - 10)} {
         top: ($r * 10%)-10%;
         left: ($c * 10%)-10%;
       }
+
       .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover ~ .reflection-content {
         transform: rotateX((($r * -5)+25deg)) rotateY((-25deg+ ($c * 5)));
+
         &:before {
           transform: translateY(25- (5% * $r));
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 719px) and (max-width: 1290px) {
+  .reflection-container {
+    .reflection-content {
+      width: 62.9vw;
+      background-size: cover;
+    }
+  }
+}
+
+@media only screen and (min-width: 719px) and (max-width: 1100px) {
+  .reflection-container {
+    .reflection-content {
+      height: 370px;
+    }
+  }
+}
+
+@media only screen and (min-width: 719px) and (max-width: 850px) {
+  .reflection-container {
+    .reflection-content {
+      height: 320px;
     }
   }
 }

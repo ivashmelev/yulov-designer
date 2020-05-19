@@ -8,15 +8,35 @@
   justify-content: flex-end;
   margin-top: 30px;
 
-  & > a, span {
+  & > .link,
+  .text {
     @extend .text;
   }
 
   & > a:hover {
-
     color: $purple-color;
+
     &:after {
       width: 0;
     }
+  }
+}
+
+@media only screen and (min-width: 719px) and (max-width: 1290px) {
+  .wrapper {
+    height: 52px;
+    background-color: $black-color;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    left: -40px;
+    width: 110%;
+  }
+
+  .link,
+  .text {
+    color: $white-color;
+    font-size: 1.1rem;
+    display: -webkit-inline-box;
   }
 }

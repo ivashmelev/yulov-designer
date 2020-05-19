@@ -13,12 +13,13 @@
 .header {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
   position: relative;
-  left: 25.8%;
+  width: 1000px;
+  top: -60px;
+  left: -175%;
 
   &.right {
-    left: 46.2%;
+    left: 154%;
   }
 }
 
@@ -145,6 +146,7 @@
 
     &:hover {
       color: $purple-color;
+
       &:after {
         width: 0;
       }
@@ -162,6 +164,7 @@
 
     &:hover {
       color: $purple-color !important;
+
       &:after {
         width: 0 !important;
       }
@@ -178,7 +181,7 @@
   position: absolute;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1290px) {
+@media only screen and (min-width: 719px) and (max-width: 1290px) {
   .number {
     display: none;
   }
@@ -186,18 +189,20 @@
   .header {
     flex-direction: column;
     align-items: flex-start;
-    left: 62.3%;
+    left: 20px;
     top: 0;
     z-index: 300;
-    position: absolute;
+    position: relative;
+    width: 100%;
 
     &.right {
-      left: 105px;
+      left: 0px;
     }
   }
 
   .title {
     margin-bottom: 10px;
+    line-height: 32px;
   }
 
   .subtitle {
@@ -210,7 +215,23 @@
     margin: 0;
 
     &.right {
-      left: 105px;
+      left: 0;
     }
+  }
+
+  .parent_description_wrapper {
+    position: relative;
+    width: 100%;
+    height: max-content;
+  }
+
+  .description_wrapper {
+    margin-top: 44px;
+    position: relative;
+    bottom: unset;
+  }
+
+  .link_wrapper {
+    justify-content: flex-start;
   }
 }
