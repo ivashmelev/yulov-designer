@@ -36,7 +36,6 @@
     margin-top: 20px;
 
     &:hover {
-
       &:after {
         width: 0;
       }
@@ -53,3 +52,21 @@
   margin-top: 40px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1290px) {
+  .wrapper {
+    max-width: 460px;
+    margin-top: 50px;
+  }
+
+  .contacts_wrapper {
+    margin-top: 78px;
+  }
+
+  .link_wrapper {
+    margin-top: 40px;
+
+    & > a {
+      font-size: 1.6rem;
+    }
+  }
+}

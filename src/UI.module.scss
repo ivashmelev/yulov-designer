@@ -1,53 +1,53 @@
 /* COLORS */
-$purple-color: #DD94FF;
+$purple-color: #dd94ff;
 $black-color: #424242;
-$white-color: #FFFFFF;
+$white-color: #ffffff;
 
 /* FONTS */
 @font-face {
   font-family: "Gotham Pro";
-  src: url('static/fonts/GothamPro/GothamPro.ttf');
+  src: url("static/fonts/GothamPro/GothamPro.ttf");
 }
 
 @font-face {
   font-family: "Gotham Pro Medium";
-  src: url('static/fonts/GothamPro/GothamPro-Medium.ttf');
+  src: url("static/fonts/GothamPro/GothamPro-Medium.ttf");
 }
 
 @font-face {
   font-family: "Gotham Pro Bold";
-  src: url('static/fonts/GothamPro/GothamPro-Bold.ttf');
+  src: url("static/fonts/GothamPro/GothamPro-Bold.ttf");
 }
 
 @font-face {
   font-family: "Gotham Pro Black";
-  src: url('static/fonts/GothamPro/GothamPro-Black.ttf');
+  src: url("static/fonts/GothamPro/GothamPro-Black.ttf");
 }
 
 /* TEXT */
 .text {
   font-family: "Gotham Pro", sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: $black-color;
   line-height: 22px;
 }
 
 .text_medium {
   font-family: "Gotham Pro Medium", sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: $black-color;
 }
 
 .text_bold {
   font-family: "Gotham Pro Bold", sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: $black-color;
 }
 
 .text_black {
   font-family: "Gotham Pro Black", sans-serif;
   color: $black-color;
-  font-size: 150px;
+  font-size: 15rem;
 }
 
 /* LINKS */
@@ -60,13 +60,13 @@ a {
 
   &:after {
     width: 0;
-    content: '';
+    content: "";
     height: 5px;
     display: block;
     position: relative;
     background-color: $purple-color;
     top: 5px;
-    transition: width .3s cubic-bezier(.77,0,.175,1);
+    transition: width 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   &:hover {

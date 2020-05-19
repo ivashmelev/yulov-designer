@@ -2,10 +2,10 @@
 
 .wrapper {
   display: flex;
-  top: 5%;
   height: 60px;
   position: fixed;
   z-index: 200;
+  margin-top: 70px;
 }
 
 .title_wrapper {
@@ -21,6 +21,6 @@
 }
 
 .subtitle {
-  @extend  .text_medium;
+  @extend .text_medium;
   font-size: 24px;
 }

@@ -7,7 +7,7 @@
   background-color: $purple-color;
   position: relative;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 200px;
 }
 
 .title {
@@ -21,18 +21,16 @@
 }
 
 .link_white {
-
-  left: 591px;
+  left: 63.8%;
   top: 36px;
   position: relative;
   height: 22px;
   line-height: 11px;
   z-index: 250;
 
-
   &:after {
     width: 110%;
-    content: '';
+    content: "";
     top: 10px;
     background-color: $white-color;
   }
@@ -44,10 +42,16 @@
 }
 
 .block {
+  &:nth-child(1) {
     max-width: 335px;
-    width: 100%;
     margin-left: 118px;
-    margin-right: 128px;
+  }
+
+  &:nth-child(2) {
+    margin-left: 128px;
+  }
+
+  width: 100%;
 }
 
 .head {
@@ -87,5 +91,30 @@
     max-width: 390px;
     width: 100%;
     left: 67.8%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .wrapper {
+    max-width: 460px;
+  }
+
+  .title {
+    font-size: 100px;
+    line-height: 96px;
+    margin-top: 175px;
+  }
+
+  .block_wrapper {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .block {
+    margin-left: 110px !important;
+
+    &:nth-child(2) {
+      margin-top: 41px;
+    }
   }
 }

@@ -1,50 +1,52 @@
-.reflection-container{
-  position:relative;
-  display:inline-block;
-  vertical-align:middle;
+.reflection-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   transform-style: preserve-3d;
   perspective: 3000px;
   cursor: pointer;
   z-index: 200;
-  transition:100ms linear transform;
+  transition: 100ms linear transform;
 
   &.active {
     transform: scale(1.1);
   }
 
-  .reflection-content{
-    width:809px;
-    height:462px;
-    background-position:center;
-    transform:rotateX(0) rotateY(0);
-    pointer-events:none;
-    transition:100ms linear transform;
-    overflow:hidden;
-    &:before{
-      content:'';
-      position:absolute;
-      width:200%;
-      height:200%;
-      left:-50%;
-      top:-50%;
+  .reflection-content {
+    width: 809px;
+    height: 462px;
+    background-position: center;
+    transform: rotateX(0) rotateY(0);
+    pointer-events: none;
+    transition: 100ms linear transform;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(66, 66, 66, 0.25);
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      left: -50%;
+      top: -50%;
     }
   }
-  .reflection-grid-cell{
-    position:absolute;
+  .reflection-grid-cell {
+    position: absolute;
     z-index: 1;
-    width:10%;
-    height:10%;
+    width: 10%;
+    height: 10%;
   }
-  @for $r from 1 to 11{
+  @for $r from 1 to 11 {
     @for $c from 1 to 11 {
-      .reflection-grid-cell-#{( ($r*10) + $c - 10)}{
-        top:($r*10%)-10%;
-        left:($c*10%)-10%;
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)} {
+        top: ($r * 10%)-10%;
+        left: ($c * 10%)-10%;
       }
-      .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover ~ .reflection-content{
-        transform:rotateX((($r*-5)+25deg)) rotateY((-25deg+($c*5)));
-        &:before{
-          transform:translateY(25-(5%*$r));
+      .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover ~ .reflection-content {
+        transform: rotateX((($r * -5)+25deg)) rotateY((-25deg+ ($c * 5)));
+        &:before {
+          transform: translateY(25- (5% * $r));
         }
       }
     }
