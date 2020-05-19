@@ -1,7 +1,6 @@
 import React, {memo, useState} from 'react';
 import {history} from "../../utils/history";
 import {Route, Router, Switch, } from "react-router-dom";
-import Project from "../../components/Project";
 import Background from "../../components/Background";
 import styles from './App.module.scss';
 import Header from "../../components/Header";
@@ -12,6 +11,7 @@ import list from '../../configs/list-config';
 import ReactFullpage from "@fullpage/react-fullpage";
 import Contacts from "../Contacts";
 import contactsConfig from "../../configs/contacts-config";
+import Project from "../Project";
 
 const App = memo(() => {
 
@@ -23,7 +23,6 @@ const App = memo(() => {
         <div>
             <Router history={history}>
                 <Switch>
-                    <Route exact path="/project/:id" component={Project} />
                 </Switch>
             </Router>
 

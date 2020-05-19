@@ -4,7 +4,7 @@ const list = [
         subtitle: 'сайт туроператора',
         description: 'Туроператор cпециализируется на турах в США, организовывает группы для совместной поездки на Burning Man.',
         link: '#',
-        img: '/images/bm_1.png'
+        img: '/images/preview/bm_1.png'
     },
     {
         title: 'CYBERPUNK 2077',
@@ -14,21 +14,21 @@ const list = [
         Игра погружает нас в мир кибернетического будущего созданный по мотивам научно-фантастического романа Филлипа Дика 
         "Мечтают ли андроиды об электроовцах?".`,
         link: '#',
-        img: '/images/bm_2.png'
+        img: '/images/preview/bm_2.png'
     },
     {
         title: 'WEB DESIGN STUDIO',
         subtitle: 'СТУДИЯ ВЕБ-ДИЗАЙНА',
         description: `Дизайн главной страницы сайта-портфолио веб-студии.`,
         link: '#',
-        img: '/images/bm_3.png'
+        img: '/images/preview/bm_3.png'
     },
     {
         title: 'AGROROS BANK',
         subtitle: 'РЕДИЗАЙН САЙТА',
         description: `Дизайн сайта банка очень устарел. Попытался сделать его более легким и современным. `,
         link: '#',
-        img: '/images/bm_4.png'
+        img: '/images/preview/bm_4.png'
     },
 ];
 
