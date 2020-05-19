@@ -5,39 +5,30 @@ import Sidebar from "../../components/Sidebar";
 
 const Project = memo(({ config }) => {
 
-    const [img, setImg] = useState();
-    const [isHave, setIsHave] = useState(true);
-
     const { id } = useParams();
-    const project = config[id - 1];
+    const project = config.filter(el => el.name === id)[0];
+    const navigations = config.map(el => el.name);
 
+    if (!project) {
+        return <Redirect to={'/'} />
+    }
 
-
-    useEffect(() => {
-        if (project) {
-            setIsHave(true);
-            setImg(project.img)
-        }
-
-        console.log(isHave)
-    });
+    const img = project.img;
 
     return (
-        !isHave ?
-            <Redirect to={ '/' } />
-            :
-            <div className={ styles.wrapper }>
-                <div className={ styles.block }>
-                    <img src={ img } />
-                </div>
-                <div className={ styles.block }>
-                    <Sidebar
-                        id={ Number(id) }
-                        length={ config.length }
-                        { ...project }
-                    />
-                </div>
+        <div className={styles.wrapper}>
+            <div className={styles.block}>
+                <img src={img} />
             </div>
+            <div className={styles.block}>
+                <Sidebar
+                    id={id}
+                    length={config.length}
+                    navigations={navigations}
+                    {...project}
+                />
+            </div>
+        </div>
     )
 });
 

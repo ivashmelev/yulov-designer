@@ -22,8 +22,8 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
             <div className={`${styles.content_wrapper} ${right && styles.right}`}>
                 <div className={`${styles.content} ${right && styles.right}`}>
                     <div className={`${styles.number} ${right && styles.right}`}>0{index + 1}</div>
-                    <a className={`reflection-container ${isHoveredLink && 'active'} ${styles.link_img}`}
-                        href={link}
+                    <Link className={`reflection-container ${isHoveredLink && 'active'} ${styles.link_img}`}
+                        to={link}
                         onMouseEnter={hoverImg}
                         onMouseLeave={unhoverImg}
                     >
@@ -32,7 +32,7 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
                         }
                         )}
                         <div className='reflection-content' style={{ backgroundImage: `url(${img})` }} />
-                    </a>
+                    </Link>
                     <div className={`${styles.parent_description_wrapper} ${right && styles.right}`} >
                         <div className={`${styles.header} ${right && styles.right}`}>
                             <span className={styles.title}>
