@@ -3,3 +3,9 @@
   right: 0;
   top: 0;
 }
+
+@media only screen and (min-width: 0) and (max-width: 720px) {
+  .Bg_wrapper {
+    display: none;
+  }
+}

@@ -52,7 +52,7 @@
   margin-top: 40px;
 }
 
-@media only screen and (min-width: 719px) and (max-width: 1290px) {
+@media only screen and (min-width: 0) and (max-width: 1290px) {
   .wrapper {
     max-width: 460px;
     margin-top: 120px;
@@ -76,5 +76,22 @@
     & > a {
       font-size: 1.6rem;
     }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .wrapper {
+    max-width: 240px;
+  }
+
+  .title {
+    margin-top: 50px;
+    font-size: 5rem;
+    line-height: 48px;
+    left: 51.3%;
+  }
+
+  .network_wrapper {
+    width: 120%;
   }
 }

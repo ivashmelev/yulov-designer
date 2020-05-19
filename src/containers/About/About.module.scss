@@ -118,3 +118,48 @@
     }
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .wrapper {
+    max-width: 240px;
+    margin-top: 116px;
+  }
+
+  .link_white {
+    left: 38.8%;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 48px;
+    left: -12.3%;
+    height: unset;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+
+  .block_wrapper {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .head {
+    font-size: 1.4rem;
+  }
+
+  .block {
+    width: 158px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-left: 40px;
+    }
+
+    &:nth-child(2) {
+      width: 239px;
+      margin-top: 40px;
+    }
+  }
+}

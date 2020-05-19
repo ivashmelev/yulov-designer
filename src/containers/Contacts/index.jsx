@@ -1,15 +1,14 @@
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import styles from './Contacts.module.scss';
 import Networks from "../../components/Networks";
 import networksConfig from "../../configs/networks-config";
 import CreatedBy from "../../components/CreatedBy";
 
-const Contacts = memo(({phone, mail}) => {
+const Contacts = memo(({ phone, mail }) => {
     return (
         <div className={styles.wrapper}>
             <span className={styles.title}>
-                Кон-
-                такты
+                Con-tacts
             </span>
             <div className={styles.contacts_wrapper}>
                 <div className={styles.link_wrapper}>

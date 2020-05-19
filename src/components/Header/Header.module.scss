@@ -24,3 +24,24 @@
   @extend .text_medium;
   font-size: 24px;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+
+  .title_wrapper {
+    height: 35px;
+    margin-left: 40px;
+  }
+
+  .wrapper {
+    margin-top: 40px;
+    height: 35px;
+    z-index: 0;
+  }
+}

@@ -1,6 +1,6 @@
-import React, {memo, useState} from 'react';
-import {history} from "../../utils/history";
-import {Route, Router, Switch, } from "react-router-dom";
+import React, { memo, useState } from 'react';
+import { history } from "../../utils/history";
+import { Route, Router, Switch, } from "react-router-dom";
 import Background from "../../components/Background";
 import styles from './App.module.scss';
 import Header from "../../components/Header";
@@ -28,15 +28,17 @@ const App = memo(() => {
 
             <div className={styles.Wrapper}>
                 <Header />
-                <Navigation fullpageApi={fullpageApi} pageCount={pageCount} currentPage={currentPage}/>
+                <Navigation fullpageApi={fullpageApi} pageCount={pageCount} currentPage={currentPage} />
                 <ReactFullpage
+                    dragAndMove
+                    fadingEffect
                     scrollOverflow
                     afterLoad={(origin, destination) => setCurrentPage(destination.index)}
                     scrollOverflowOptions={{
                         scrollbars: false,
                     }}
 
-                    render={({state, fullpageApi}) => {
+                    render={({ state, fullpageApi }) => {
                         setFullpageApi(fullpageApi);
                         setPageCount(state.sectionCount);
 
@@ -52,21 +54,21 @@ const App = memo(() => {
                                         return (
 
                                             <div className={'section'} key={index}>
-                                                <a name={'portfolio'}/>
-                                                <Element  index={index} {...element} />
+                                                <a name={'portfolio'} />
+                                                <Element index={index} {...element} />
                                             </div>
                                         )
                                     }
 
                                     return (
                                         <div className={'section'} key={index}>
-                                            <a name={'portfolio'}/>
+                                            <a name={'portfolio'} />
                                             <Element right index={index} {...element} />
                                         </div>
                                     )
                                 })}
                                 <div className={'section'}>
-                                    <a name='contacts'/>
+                                    <a name='contacts' />
                                     <Contacts {...contactsConfig} />
                                 </div>
                             </div>
@@ -74,7 +76,7 @@ const App = memo(() => {
                     }}
                 />
             </div>
-    </div>)
+        </div>)
 });
 
 export default App;

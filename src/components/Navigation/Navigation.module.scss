@@ -43,6 +43,7 @@
 
   &:hover {
     color: $purple-color;
+
     &:after {
       width: 0;
     }
@@ -57,5 +58,11 @@
 @media only screen and (min-width: 719px) and (max-width: 1290px) {
   .wrapper {
     width: 94%;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .wrapper {
+    display: none;
   }
 }

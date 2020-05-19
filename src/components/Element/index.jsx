@@ -22,14 +22,18 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
             <div className={`${styles.content_wrapper} ${right && styles.right}`}>
                 <div className={`${styles.content} ${right && styles.right}`}>
                     <div className={`${styles.number} ${right && styles.right}`}>0{index + 1}</div>
-                    <div className={`reflection-container ${isHoveredLink && 'active'}`} onMouseEnter={hoverImg} onMouseLeave={unhoverImg}>
+                    <a className={`reflection-container ${isHoveredLink && 'active'} ${styles.link_img}`}
+                        href={link}
+                        onMouseEnter={hoverImg}
+                        onMouseLeave={unhoverImg}
+                    >
                         {fragments.map((fragment, index) => {
                             return <div key={index} className={`reflection-grid-cell reflection-grid-cell-${index}`} />
                         }
                         )}
                         <div className='reflection-content' style={{ backgroundImage: `url(${img})` }} />
-                    </div>
-                    <div className={styles.parent_description_wrapper}>
+                    </a>
+                    <div className={`${styles.parent_description_wrapper} ${right && styles.right}`} >
                         <div className={`${styles.header} ${right && styles.right}`}>
                             <span className={styles.title}>
                                 {title}&nbsp;
@@ -39,7 +43,7 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
                             </span>
                         </div>
                         <div className={`${styles.description_wrapper} ${right && styles.right}`}>
-                            <span className={styles.description}>
+                            <span className={`${styles.description} ${right && styles.right}`}>
                                 {description}
                             </span>
                             <div className={styles.link_wrapper}>
