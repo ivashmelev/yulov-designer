@@ -2,7 +2,7 @@ const list = [
     {
         title: 'Burning Man',
         subtitle: 'сайт туроператора',
-        description: 'Туроператор cпециализируется на турах в США, организовывает группы для совместной поездки на Burning Man.',
+        description: `Туроператор cпециализируется на турах в США, организовывает группы для совместной поездки на Burning Man.`,
         link: '/projects/burning-man',
         img: '/images/preview/bm_1.png'
     },

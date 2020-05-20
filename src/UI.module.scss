@@ -30,24 +30,28 @@ $white-color: #ffffff;
   font-size: 1.2rem;
   color: $black-color;
   line-height: 22px;
+  white-space: break-spaces;
 }
 
 .text_medium {
   font-family: "Gotham Pro Medium", sans-serif;
   font-size: 1.2rem;
   color: $black-color;
+  white-space: break-spaces;
 }
 
 .text_bold {
   font-family: "Gotham Pro Bold", sans-serif;
   font-size: 1.6rem;
   color: $black-color;
+  white-space: break-spaces;
 }
 
 .text_black {
   font-family: "Gotham Pro Black", sans-serif;
   color: $black-color;
   font-size: 15rem;
+  white-space: break-spaces;
 }
 
 /* LINKS */
