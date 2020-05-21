@@ -1,5 +1,10 @@
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0px;
 }
 
 body {

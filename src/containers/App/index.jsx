@@ -12,6 +12,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import Contacts from "../Contacts";
 import contactsConfig from "../../configs/contacts-config";
 import Project from "../Project";
+import Slider from '../../components/Slider';
 
 const App = memo(() => {
 
@@ -27,56 +28,27 @@ const App = memo(() => {
             </Router>
 
             <div className={styles.Wrapper}>
-                <Header />
                 <Navigation fullpageApi={fullpageApi} pageCount={pageCount} currentPage={currentPage} />
-                <ReactFullpage
-                    dragAndMove
-                    fadingEffect
-                    scrollOverflow
-                    afterLoad={(origin, destination) => setCurrentPage(destination.index)}
-                    scrollOverflowOptions={{
-                        scrollbars: false,
-                    }}
-
-                    render={({ state, fullpageApi }) => {
-                        setFullpageApi(fullpageApi);
-                        setPageCount(state.sectionCount);
+                <Header />
+                <Background />
+                <About />
+                <Slider>
+                    {list.map((element, index) => {
+                        if (index % 2 === 0) {
+                            return (
+                                <Element key={index} index={index} {...element} />
+                            )
+                        }
 
                         return (
-                            <div>
-                                <div className={`section`}>
-                                    <a name={'about'} />
-                                    <Background />
-                                    <About />
-                                </div>
-                                {list.map((element, index) => {
-                                    if (index % 2 === 0) {
-                                        return (
-
-                                            <div className={'section'} key={index}>
-                                                <a name={'portfolio'} />
-                                                <Element index={index} {...element} />
-                                            </div>
-                                        )
-                                    }
-
-                                    return (
-                                        <div className={'section'} key={index}>
-                                            <a name={'portfolio'} />
-                                            <Element right index={index} {...element} />
-                                        </div>
-                                    )
-                                })}
-                                <div className={'section'}>
-                                    <a name='contacts' />
-                                    <Contacts {...contactsConfig} />
-                                </div>
-                            </div>
+                            <Element right key={index} index={index} {...element} />
                         )
-                    }}
-                />
+                    })}
+                </Slider>
+                <Contacts {...contactsConfig} />
             </div>
-        </div>)
+        </div>
+    )
 });
 
 export default App;
