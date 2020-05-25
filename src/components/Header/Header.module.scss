@@ -3,9 +3,9 @@
 .wrapper {
   display: flex;
   height: 60px;
-  position: fixed;
   z-index: 200;
-  margin-top: 70px;
+  align-items: center;
+  height: 200px;
 }
 
 .title_wrapper {
@@ -13,30 +13,32 @@
   flex-direction: column;
   justify-content: space-between;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
   @extend .text_bold;
-  font-size: 24px;
+  font-size: 1.6rem;
 }
 
 .subtitle {
   @extend .text_medium;
-  font-size: 24px;
+  font-size: 1.6rem;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 720px) {
-  .title {
-    font-size: 1.6rem;
-  }
+  // .title {
+  //   font-size: 1.6rem;
+  // }
 
-  .subtitle {
-    font-size: 1.6rem;
-  }
+  // .subtitle {
+  //   font-size: 1.6rem;
+  // }
 
   .title_wrapper {
     height: 35px;
-    margin-left: 40px;
+    margin-left: 67px;
   }
 
   .wrapper {

@@ -1,7 +1,7 @@
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import styles from './Navigation.module.scss';
 
-const Navigation = memo(({fullpageApi, pageCount, currentPage}) => {
+const Navigation = memo(({ fullpageApi, pageCount, currentPage }) => {
 
 
     const changeAnchor = (slide) => () => {
@@ -20,34 +20,34 @@ const Navigation = memo(({fullpageApi, pageCount, currentPage}) => {
     // }, [currentPage])
 
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.block_wrapper}>
-                <div className={styles.block}>
-                    <a className={`${styles.link} ${currentPage === 0 && styles.active}`}
+        <div className={ styles.wrapper }>
+            <div className={ styles.block_wrapper }>
+                <div className={ styles.block }>
+                    <a className={ `${styles.link} ${currentPage >= 0 && currentPage < 2 && styles.active}` }
                         // to={'#about'}
-                       onClick={changeAnchor(1)}
+                        onClick={ changeAnchor(1) }
                     >
                         обо мне
                     </a>
-                    <a className={`${styles.link} ${currentPage > 0 && currentPage <= pageCount - 2 && styles.active}`}
+                    <a className={ `${styles.link} ${currentPage >= 2 && currentPage <= pageCount - 2 && styles.active}` }
                         // to={'#portfolio'}
-                       onClick={changeAnchor(2)}
+                        onClick={ changeAnchor(3) }
                     >
                         портфолио
                     </a>
-                    <a className={`${styles.link} ${currentPage === pageCount - 1 && styles.active}`}
+                    <a className={ `${styles.link} ${currentPage === pageCount - 1 && styles.active}` }
                         // to={'#contacts'}
-                       onClick={changeAnchor(pageCount)}
+                        onClick={ changeAnchor(pageCount) }
                     >
                         контакты
                     </a>
                 </div>
-                <div className={styles.block}>
-                    <span className={styles.label}>
-                       portfolio
+                <div className={ styles.block }>
+                    <span className={ styles.label }>
+                        portfolio
                     </span>
-                    <span className={styles.label}>
-                       2020
+                    <span className={ styles.label }>
+                        2020
                     </span>
                 </div>
             </div>
