@@ -77,7 +77,7 @@ const App = memo(() => {
                                         </div>
                                     )
                                 }) }
-                                <div className={ 'section' }>
+                                <div className={ 'section fp-wrapper contacts' }>
                                     <a name='contacts' />
                                     <Contacts { ...contactsConfig } />
                                 </div>

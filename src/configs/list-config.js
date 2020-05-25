@@ -1,5 +1,12 @@
 const list = [
     {
+        title: 'Burning Man',
+        subtitle: 'сайт туроператора',
+        description: `Туроператор cпециализируется на турах в США, организовывает группы для совместной поездки на Burning Man.`,
+        link: '/projects/burning-man',
+        img: '/images/preview/bm_1.png'
+    },
+    {
         title: 'CYBERPUNK 2077',
         subtitle: 'РЕДИЗАЙН САЙТА',
         description: `Была поставлена задача разработки сайта образовательно-исторического уклона. 
@@ -8,13 +15,6 @@ const list = [
         "Мечтают ли андроиды об электроовцах?".`,
         link: '/projects/cyberpunk',
         img: '/images/preview/bm_2.png'
-    },
-    {
-        title: 'Burning Man',
-        subtitle: 'сайт туроператора',
-        description: `Туроператор cпециализируется на турах в США, организовывает группы для совместной поездки на Burning Man.`,
-        link: '/projects/burning-man',
-        img: '/images/preview/bm_1.png'
     },
     {
         title: 'WEB DESIGN STUDIO',
