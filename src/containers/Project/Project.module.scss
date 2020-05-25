@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+}
+
+.block {
+  &:nth-child(1) {
+    width: 75vw;
+  }
+
+  &:nth-child(2) {
+    width: 25vw;
+  }
+
+  & > img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  .block {
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+}

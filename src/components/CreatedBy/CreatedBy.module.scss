@@ -1,0 +1,50 @@
+@import "../../UI.module";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  height: 0;
+  bottom: 50px;
+
+  & > .link,
+  .text {
+    @extend .text;
+  }
+
+  & > a:hover {
+    color: $purple-color;
+
+    &:after {
+      width: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 1290px) {
+  .wrapper {
+    height: 52px;
+    background-color: $black-color;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 52px;
+    bottom: 0;
+  }
+
+  .link,
+  .text {
+    color: $white-color;
+    font-size: 1.1rem;
+    display: -webkit-inline-box;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .wrapper {
+    width: 100%;
+    top: unset;
+    bottom: 0;
+  }
+}

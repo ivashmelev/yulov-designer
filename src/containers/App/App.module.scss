@@ -1,0 +1,38 @@
+@import "../../UI.module";
+
+.Wrapper {
+  margin: 0 0 0 20px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.portfolio_wrapper {
+  height: 526px;
+  width: 926px;
+  background-color: $purple-color;
+  margin: 0 auto;
+
+  & .title {
+    @extend .text_black;
+    position: relative;
+    line-height: 144px;
+    max-width: 390px;
+    width: 100%;
+    left: 67.8%;
+    height: 288px;
+    margin-top: 155px;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 1290px) {
+  .Wrapper {
+    margin: 0 0 0 40px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+  .Wrapper {
+    margin: 0 0;
+  }
+}
