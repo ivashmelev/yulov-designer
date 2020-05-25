@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import { history } from "../../utils/history";
 import { Route, Router, Switch, } from "react-router-dom";
 import Background from "../../components/Background";
@@ -12,6 +12,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import Contacts from "../Contacts";
 import contactsConfig from "../../configs/contacts-config";
 import Project from "../Project";
+import './App.scss'
 
 const App = memo(() => {
 
@@ -19,61 +20,70 @@ const App = memo(() => {
     const [pageCount, setPageCount] = useState();
     const [currentPage, setCurrentPage] = useState(1);
 
+    const tooltips = ['Начало', 'Обо мне'];
+    list.forEach(el => tooltips.push(el.title));
+    tooltips.push('Контакты');
+
     return (
         <div>
-            <Router history={history}>
+            <Router history={ history }>
                 <Switch>
                 </Switch>
             </Router>
 
-            <div className={styles.Wrapper}>
-                <Header />
-                <Navigation fullpageApi={fullpageApi} pageCount={pageCount} currentPage={currentPage} />
+            <div className={ styles.Wrapper }>
+                <Navigation fullpageApi={ fullpageApi } pageCount={ pageCount } currentPage={ currentPage } />
                 <ReactFullpage
                     dragAndMove
                     fadingEffect
                     scrollOverflow
-                    afterLoad={(origin, destination) => setCurrentPage(destination.index)}
-                    scrollOverflowOptions={{
+                    navigation
+                    navigationTooltips={ tooltips }
+                    afterLoad={ (origin, destination) => setCurrentPage(destination.index) }
+                    scrollOverflowOptions={ {
                         scrollbars: false,
-                    }}
+                    } }
 
-                    render={({ state, fullpageApi }) => {
+                    render={ ({ state, fullpageApi }) => {
                         setFullpageApi(fullpageApi);
                         setPageCount(state.sectionCount);
 
                         return (
                             <div>
-                                <div className={`section`}>
-                                    <a name={'about'} />
+                                <div className={ `section fp-auto-height` }>
+                                    <Header />
                                     <Background />
-                                    <About />
                                 </div>
-                                {list.map((element, index) => {
+                                <div className={ `section fp-auto-height` }>
+                                    <div className='fp-wrapper'>
+                                        <About />
+                                    </div>
+                                </div>
+                                { list.map((element, index) => {
                                     if (index % 2 === 0) {
                                         return (
 
-                                            <div className={'section'} key={index}>
-                                                <a name={'portfolio'} />
-                                                <Element index={index} {...element} />
+                                            <div className={ 'section fp-auto-height' } key={ index }>
+                                                <a name={ 'portfolio' } />
+                                                <Element index={ index } { ...element } />
                                             </div>
                                         )
                                     }
 
                                     return (
-                                        <div className={'section'} key={index}>
-                                            <a name={'portfolio'} />
-                                            <Element right index={index} {...element} />
+                                        <div className={ 'section fp-auto-height' } key={ index }>
+                                            <a name={ 'portfolio' } />
+                                            <Element right index={ index } { ...element } />
                                         </div>
                                     )
-                                })}
-                                <div className={'section'}>
+                                }) }
+                                <div className={ 'section' }>
                                     <a name='contacts' />
-                                    <Contacts {...contactsConfig} />
+                                    <Contacts { ...contactsConfig } />
                                 </div>
                             </div>
                         )
-                    }}
+                    } }
                 />
             </div>
         </div>)

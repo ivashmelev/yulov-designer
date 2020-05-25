@@ -18,43 +18,43 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
     const unhoverLink = () => setIsHoveredLink(false);
 
     return (
-        <div className={styles.wrapper}>
-            <div className={`${styles.content_wrapper} ${right && styles.right}`}>
-                <div className={`${styles.content} ${right && styles.right}`}>
-                    <div className={`${styles.number} ${right && styles.right}`}>0{index + 1}</div>
-                    <Link className={`reflection-container ${isHoveredLink && 'active'} ${styles.link_img}`}
-                        to={link}
-                        onMouseEnter={hoverImg}
-                        onMouseLeave={unhoverImg}
+        <div className={ styles.wrapper }>
+            <div className={ `${styles.content_wrapper} ${right && styles.right}` }>
+                <div className={ `${styles.content} ${right && styles.right}` }>
+                    <div className={ `${styles.number} ${right && styles.right}` }>0{ index + 1 }</div>
+                    <Link className={ `reflection-container ${isHoveredLink && 'active'} ${styles.link_img}` }
+                        to={ link }
+                        onMouseEnter={ hoverImg }
+                        onMouseLeave={ unhoverImg }
                     >
-                        {fragments.map((fragment, index) => {
-                            return <div key={index} className={`reflection-grid-cell reflection-grid-cell-${index}`} />
+                        { fragments.map((fragment, index) => {
+                            return <div key={ index } className={ `reflection-grid-cell reflection-grid-cell-${index}` } />
                         }
-                        )}
-                        <div className='reflection-content' style={{ backgroundImage: `url(${img})` }} />
+                        ) }
+                        <div className='reflection-content' style={ { backgroundImage: `url(${img})` } } />
                     </Link>
-                    <div className={`${styles.parent_description_wrapper} ${right && styles.right}`} >
-                        <div className={`${styles.header} ${right && styles.right}`}>
-                            <span className={styles.title}>
-                                {title}&nbsp;
+                    <div className={ `${styles.parent_description_wrapper} ${right && styles.right}` } >
+                        <div className={ `${styles.header} ${right && styles.right}` }>
+                            <span className={ styles.title }>
+                                { title }&nbsp;
                             </span>
-                            <span className={styles.subtitle}>
-                                - {subtitle}
+                            <span className={ styles.subtitle }>
+                                - { subtitle }
                             </span>
                         </div>
-                        <div className={`${styles.description_wrapper} ${right && styles.right}`}>
-                            <span className={`${styles.description} ${right && styles.right}`}>
-                                {description}
+                        <div className={ `${styles.description_wrapper} ${right && styles.right}` }>
+                            <span className={ `${styles.description} ${right && styles.right}` }>
+                                { description }
                             </span>
-                            <div className={styles.link_wrapper}>
-                                <Link className={`${styles.link} ${isHoveredImg && styles.active}`} to={link}
-                                    onMouseEnter={hoverLink} onMouseLeave={unhoverLink}
+                            <div className={ styles.link_wrapper }>
+                                <Link className={ `${styles.link} ${isHoveredImg && styles.active}` } to={ link }
+                                    onMouseEnter={ hoverLink } onMouseLeave={ unhoverLink }
                                 >
                                     Посмотреть проект >>
                                 </Link>
                             </div>
-                            <div className={styles.soc_wrapper}>
-                                <Networks config={networksConfig} />
+                            <div className={ styles.soc_wrapper }>
+                                <Networks config={ networksConfig } />
                             </div>
                         </div>
                     </div>

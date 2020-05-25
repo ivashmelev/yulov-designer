@@ -1,0 +1,26 @@
+@import "../../UI.module.scss";
+
+#fp-nav a {
+    &:hover:after {
+        width: 0;
+    }
+}
+
+.fp-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 0 100px 0;
+
+    &:last-child() {
+        align-items: flex-end;
+    }
+
+    &.about {
+        // height: 1000px;
+    }
+}
+
+.fp-tooltip {
+    color: black !important;
+    font-family: "Gotham Pro", sans-serif !important;
+}
