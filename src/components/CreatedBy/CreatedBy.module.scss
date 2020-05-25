@@ -3,10 +3,10 @@
 .wrapper {
   width: 100%;
   display: flex;
-  position: absolute;
-  right: 20px;
+  position: relative;
   justify-content: flex-end;
-  margin-top: 30px;
+  height: 0;
+  bottom: 50px;
 
   & > .link,
   .text {
@@ -24,13 +24,12 @@
 
 @media only screen and (min-width: 0) and (max-width: 1290px) {
   .wrapper {
-    height: 72px;
+    height: 52px;
     background-color: $black-color;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
-    left: -40px;
-    width: 110%;
+    width: 100%;
+    height: 52px;
     bottom: 0;
   }
 
@@ -44,7 +43,8 @@
 
 @media only screen and (min-width: 0px) and (max-width: 720px) {
   .wrapper {
-    width: 120%;
+    width: 100%;
+    top: unset;
     bottom: 0;
   }
 }

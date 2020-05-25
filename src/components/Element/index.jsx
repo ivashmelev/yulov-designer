@@ -8,30 +8,20 @@ import networksConfig from "../../configs/networks-config";
 const Element = memo(({ title, subtitle, index, img, description, right, link }) => {
 
     const [fragments] = useState(new Array(100).fill(null));
-    const [isHoveredImg, setIsHoveredImg] = useState(false);
-    const [isHoveredLink, setIsHoveredLink] = useState(false);
-
-    const hoverImg = () => setIsHoveredImg(true);
-    const unhoverImg = () => setIsHoveredImg(false);
-
-    const hoverLink = () => setIsHoveredLink(true);
-    const unhoverLink = () => setIsHoveredLink(false);
 
     return (
-        <div className={ styles.wrapper }>
+        <div className={ styles.wrapper } id={ index === 0 && 'portfolio' }>
             <div className={ `${styles.content_wrapper} ${right && styles.right}` }>
                 <div className={ `${styles.content} ${right && styles.right}` }>
                     <div className={ `${styles.number} ${right && styles.right}` }>0{ index + 1 }</div>
-                    <Link className={ `reflection-container ${isHoveredLink && 'active'} ${styles.link_img}` }
+                    <Link className={ `reflection-container ${styles.link_img}` }
                         to={ link }
-                        onMouseEnter={ hoverImg }
-                        onMouseLeave={ unhoverImg }
                     >
                         { fragments.map((fragment, index) => {
                             return <div key={ index } className={ `reflection-grid-cell reflection-grid-cell-${index}` } />
                         }
                         ) }
-                        <div className='reflection-content' style={ { backgroundImage: `url(${img})` } } />
+                        <div className={ `reflection-content` } style={ { backgroundImage: `url(${img})` } } />
                     </Link>
                     <div className={ `${styles.parent_description_wrapper} ${right && styles.right}` } >
                         <div className={ `${styles.header} ${right && styles.right}` }>
@@ -47,9 +37,7 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
                                 { description }
                             </span>
                             <div className={ styles.link_wrapper }>
-                                <Link className={ `${styles.link} ${isHoveredImg && styles.active}` } to={ link }
-                                    onMouseEnter={ hoverLink } onMouseLeave={ unhoverLink }
-                                >
+                                <Link className={ `${styles.link} ` } to={ link }>
                                     Посмотреть проект >>
                                 </Link>
                             </div>

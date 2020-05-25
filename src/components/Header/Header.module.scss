@@ -5,7 +5,25 @@
   height: 60px;
   z-index: 200;
   align-items: center;
-  height: 200px;
+  padding: 82px 0;
+  position: relative;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.label {
+  @extend .text_medium;
+  text-align: end;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:nth-child(2) {
+    justify-content: space-evenly;
+  }
 }
 
 .title_wrapper {
@@ -20,11 +38,13 @@
 .title {
   @extend .text_bold;
   font-size: 1.6rem;
+  line-height: 15px;
 }
 
 .subtitle {
   @extend .text_medium;
   font-size: 1.6rem;
+  line-height: 15px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 720px) {
@@ -46,6 +66,7 @@
     max-width: 240px;
     width: 100%;
     margin: 0 auto;
+    padding: 0;
     margin-top: 40px;
   }
 }

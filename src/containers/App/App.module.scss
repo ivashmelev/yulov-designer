@@ -3,6 +3,7 @@
 .Wrapper {
   margin: 0 0 0 20px;
   overflow-x: hidden;
+  position: relative;
 }
 
 .portfolio_wrapper {
@@ -27,7 +28,6 @@
 @media only screen and (min-width: 0) and (max-width: 1290px) {
   .Wrapper {
     margin: 0 0 0 40px;
-    overflow-x: unset;
   }
 }
 

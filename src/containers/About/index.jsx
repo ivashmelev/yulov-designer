@@ -8,12 +8,10 @@ import contactsConfig from '../../configs/contacts-config';
 const About = memo(() => {
 
     return (
-        <div className={ styles.wrapper }>
-            <div className={ styles.wrapper_link_white }>
-                <a className={ styles.link_white } href={ `mailto:${contactsConfig.mail}` }>
-                    связаться со мной >>
+        <div className={ styles.wrapper } id='about'>
+            <a className={ styles.link_white } href={ `mailto:${contactsConfig.mail}` }>
+                связаться со мной >>
                 </a>
-            </div>
             <span className={ styles.title }>
                 Web-designer
             </span>
@@ -32,6 +30,9 @@ const About = memo(() => {
                     <Networks config={ networksConfig } />
                 </div>
             </div>
+            <span className={ `${styles.title} ${styles.right}` }>
+                Port-folio
+            </span>
             {/*<div className={styles.portfolio_wrapper}>*/ }
             {/*    <span className={styles.title}>*/ }
             {/*        Port-folio*/ }

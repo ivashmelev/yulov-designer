@@ -13,6 +13,7 @@ import Contacts from "../Contacts";
 import contactsConfig from "../../configs/contacts-config";
 import Project from "../Project";
 import './App.scss'
+import CreatedBy from '../../components/CreatedBy';
 
 const App = memo(() => {
 
@@ -32,61 +33,29 @@ const App = memo(() => {
             </Router>
 
             <div className={ styles.Wrapper }>
-                <Navigation fullpageApi={ fullpageApi } pageCount={ pageCount } currentPage={ currentPage } />
-                <ReactFullpage
-                    dragAndMove
-                    fadingEffect
-                    scrollOverflow
-                    navigation
-                    navigationTooltips={ tooltips }
-                    afterLoad={ (origin, destination) => setCurrentPage(destination.index) }
-                    scrollOverflowOptions={ {
-                        scrollbars: false,
-                    } }
+                <Navigation targets={ [] } />
+                <Header />
+                <Background />
+                <About />
+                <div>
+                    { list.map((element, index) => {
+                        if (index % 2 === 0) {
+                            return (
 
-                    render={ ({ state, fullpageApi }) => {
-                        setFullpageApi(fullpageApi);
-                        setPageCount(state.sectionCount);
+                                <Element index={ index } { ...element } />
+                            )
+                        }
 
                         return (
-                            <div>
-                                <div className={ `section fp-auto-height` }>
-                                    <Header />
-                                    <Background />
-                                </div>
-                                <div className={ `section fp-auto-height` }>
-                                    <div className='fp-wrapper'>
-                                        <About />
-                                    </div>
-                                </div>
-                                { list.map((element, index) => {
-                                    if (index % 2 === 0) {
-                                        return (
-
-                                            <div className={ 'section fp-auto-height' } key={ index }>
-                                                <a name={ 'portfolio' } />
-                                                <Element index={ index } { ...element } />
-                                            </div>
-                                        )
-                                    }
-
-                                    return (
-                                        <div className={ 'section fp-auto-height' } key={ index }>
-                                            <a name={ 'portfolio' } />
-                                            <Element right index={ index } { ...element } />
-                                        </div>
-                                    )
-                                }) }
-                                <div className={ 'section fp-wrapper contacts' }>
-                                    <a name='contacts' />
-                                    <Contacts { ...contactsConfig } />
-                                </div>
-                            </div>
+                            <Element right index={ index } { ...element } />
                         )
-                    } }
-                />
+                    }) }
+                </div>
+                <Contacts { ...contactsConfig } />
             </div>
-        </div>)
+            <CreatedBy />
+        </div>
+    )
 });
 
 export default App;
