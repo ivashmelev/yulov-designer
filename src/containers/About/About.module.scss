@@ -93,9 +93,10 @@
   }
 }
 
-@media only screen and (min-width: 719px) and (max-width: 1080px) {
+@media only screen and (min-width: 0) and (max-width: 1080px) {
   .wrapper {
     max-width: 460px;
+    height: 893px;
   }
 
   .title {
@@ -110,7 +111,7 @@
   }
 
   .block {
-    margin-left: 110px !important;
+    margin-left: 110px;
 
     &:nth-child(2) {
       margin-top: 41px;
