@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import { history } from "../../utils/history";
 import { Route, Router, Switch, } from "react-router-dom";
 import Background from "../../components/Background";
@@ -20,32 +20,36 @@ const App = memo(() => {
     const [pageCount, setPageCount] = useState();
     const [currentPage, setCurrentPage] = useState(1);
 
+    useEffect(() => {
+        window.scroll(0, 0);
+    });
+
     return (
         <div>
-            <Router history={history}>
+            <Router history={ history }>
                 <Switch>
                 </Switch>
             </Router>
 
-            <div className={styles.Wrapper}>
-                <Navigation fullpageApi={fullpageApi} pageCount={pageCount} currentPage={currentPage} />
+            <div className={ styles.Wrapper }>
+                <About />
+                <Navigation fullpageApi={ fullpageApi } pageCount={ pageCount } currentPage={ currentPage } />
                 <Header />
                 <Background />
-                <About />
                 <Slider>
-                    {list.map((element, index) => {
+                    { list.map((element, index) => {
                         if (index % 2 === 0) {
                             return (
-                                <Element key={index} index={index} {...element} />
+                                <Element key={ index } index={ index } { ...element } />
                             )
                         }
 
                         return (
-                            <Element right key={index} index={index} {...element} />
+                            <Element right key={ index } index={ index } { ...element } />
                         )
-                    })}
+                    }) }
                 </Slider>
-                <Contacts {...contactsConfig} />
+                <Contacts { ...contactsConfig } />
             </div>
         </div>
     )

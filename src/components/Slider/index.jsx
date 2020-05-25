@@ -3,69 +3,79 @@ import styles from './Slider.module.scss';
 
 const Slider = memo(({ children }) => {
 
-    const [iterator, setIterator] = useState(0);
+    // const [iterator, setIterator] = useState(0);
+    const [parentNode, setParentNode] = useState(null);
     const [node, setNode] = useState(null);
+    window.scroll(0, 0);
 
     let countScroll = 0;
-
+    let iterator = -2;
     const handler = (e) => {
-        countScroll++;
-
-        if (countScroll >= 4) {
-            const getDirection = (e) => {
-                const direction = e.wheelDelta < 0 ? 'down' : 'up';
-
-                console.log(direction);
+        if (parentNode) {
+            const height = parentNode.offsetTop + parentNode.scrollHeight - 500;
+            console.log('parent', parentNode, 'scrollY', window.scrollY, 'offset', iterator, 'height', height);
+            const childNodes = parentNode?.childNodes;
+            const direction = e.wheelDelta < 0 ? 'down' : 'up';
 
 
-                if (direction === 'up') {
-                    if (iterator === 0) {
-                        window.scroll(0, 0);
-                        onBlur();
-                    } else {
-                        setIterator(iterator - 1);
+
+            if (window.scrollY >= 100 &&
+                window.scrollY <= parentNode.offsetTop + parentNode.scrollHeight - (parentNode.scrollHeight / 2)) {
+
+                countScroll++;
+
+                if (countScroll >= 4) {
+                    countScroll = 0;
+
+                    if (direction === 'down' && iterator <= childNodes.length) {
+                        iterator++;
+                    } else if (direction === 'up' && iterator > -1) {
+                        iterator--;
                     }
+
+                    if (iterator >= childNodes.length - 1 || iterator <= -2) {
+                        document.body.style.overflow = 'inherit';
+
+                        // window.removeEventListener('wheel', handler);
+                    } else {
+                        document.body.style.overflow = 'hidden';
+                        childNodes[iterator < 0 ? 0 : iterator].scrollIntoView({ behavior: 'smooth' });
+                    }
+
+                    console.log(direction);
                 }
 
-                if (direction === 'down') {
-                    if (iterator === children.length - 1) {
-                        window.scroll(0, 2000)
-                        onBlur();
-                    } else {
-                        setIterator(iterator + 1)
-                    }
-                }
-
-                window.removeEventListener('mousewheel', getDirection);
-            };
-
-            window.addEventListener('mousewheel', getDirection);
-
-            countScroll = 0;
+            }
         }
     }
 
-    const onFocus = () => document.querySelector('body').style.overflow = 'hidden';
-    const onBlur = () => document.querySelector('body').style.overflow = 'inherit';
+    useEffect(() => {
+        window.scroll(0, 0);
+        window.addEventListener('wheel', handler);
+    })
+
+
+
+    // const onFocus = () => document.querySelector('body').style.overflow = 'hidden';
+    // const onBlur = () => document.querySelector('body').style.overflow = 'inherit';
 
 
     return (
-        <div className={styles.wrapper}
-            // onMouseOverCapture={onFocus}
-            // onMouseOutCapture={onBlur}
-            onPointerEnter={onFocus}
-            onPointerLeave={onBlur}
-            onWheelCapture={handler}
+        <div className={ styles.wrapper }
+            ref={ setParentNode }
+        // onMouseOverCapture={onFocus}
+        // onMouseOutCapture={onBlur}
+        // onPointerEnter={ onFocus }
+        // onPointerLeave={ onBlur }
+
+        // onWheelCapture={ handler }
         >
             {
-                children.map((child, index) => {
+                children.flat().map((child, index) => {
+
                     return (
-                        <div className={styles.section} key={index}
-
-
-                            style={{ transform: `translateY(-${iterator}00vh)` }}
-                        >
-                            {child}
+                        <div ref={ e => { index === 0 && setNode(e) } } className={ styles.section } key={ index }>
+                            { child }
                         </div>
                     )
                 })
