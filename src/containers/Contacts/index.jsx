@@ -6,7 +6,7 @@ import networksConfig from "../../configs/networks-config";
 
 const Contacts = memo(({ phone, mail }) => {
     return (
-        <div className={styles.wrapper} id="contacts">
+        <div className={styles.wrapper}>
             <span className={styles.title}>
                 Con-tacts
             </span>

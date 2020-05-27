@@ -34,16 +34,16 @@ const App = memo(() => {
                     { list.map((element, index) => {
                         if (index % 2 === 0) {
                             return (
-
-                                <Element index={index} {...element} />
+                                <Element key={index} index={index} {...element} />
                             );
                         }
 
                         return (
-                            <Element right index={index} {...element} />
+                            <Element right key={index} index={index} {...element} />
                         );
                     }) }
                 </div>
+                <div id="contacts" />
                 <Contacts {...contactsConfig} />
             </div>
             <CreatedBy />

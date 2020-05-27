@@ -6,16 +6,17 @@ const Background = memo(() => {
 
     return (
         <div className={styles.Bg_wrapper}>
-                <video
-                    width={1300}
-                    loop
-                    autoPlay
-                >
-                    <source src={Video} type='video/mp4' />
-                </video>
+            <video
+              width={1300}
+              loop
+              autoPlay
+              muted
+            >
+                <source src={Video} type="video/mp4" />
+            </video>
         </div>
-    )
+    );
 
- });
+});
 
 export default Background;

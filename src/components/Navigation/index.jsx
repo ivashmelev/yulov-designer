@@ -1,11 +1,33 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import styles from './Navigation.module.scss';
 
 const Navigation = memo(() => {
 
     const [node, setNode] = useState('about');
+
+    useEffect(() => {
+        const labels = ['about', 'portfolio', 'contacts'];
+
+        window.addEventListener('scroll', () => {
+            labels.forEach((el, index, arr) => {
+
+                const target = document.querySelector(`#${el}`);
+                const nextTarget = document.querySelector(`#${arr[++index]}`);
+
+                if(nextTarget) {
+                    if (window.scrollY >= target.offsetTop && window.scrollY <= nextTarget.offsetTop) {
+                        setNode(el);
+                    }
+                }else {
+                    if (window.scrollY >= target.offsetTop) {
+                        setNode(el);
+                    }
+                }
+            });
+        });
+    });
 
     const scroll = (target) => {
         setNode(target);
