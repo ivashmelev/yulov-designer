@@ -8,5 +8,6 @@ import Root from "./Root";
 ReactDOM.render(
     <BrowserRouter>
         <Root />
-    </BrowserRouter>
-    , document.getElementById("root"));
+    </BrowserRouter>,
+    document.getElementById("root")
+);

@@ -4,25 +4,25 @@ import styles from './Header.module.scss';
 const Header = memo(() => {
 
     return (
-        <div className={ styles.wrapper }>
-            <div className={ styles.title_wrapper }>
-                <span className={ styles.title }>
+        <div className={styles.wrapper}>
+            <div className={styles.title_wrapper}>
+                <span className={styles.title}>
                     aleksey y.
-                    </span>
-                <span className={ styles.subtitle }>
+                </span>
+                <span className={styles.subtitle}>
                     web-designer
-                    </span>
+                </span>
             </div>
-            <div className={ styles.block }>
-                <span className={ styles.label }>
+            <div className={styles.block}>
+                <span className={styles.label}>
                     portfolio
-                    </span>
-                <span className={ styles.label }>
+                </span>
+                <span className={styles.label}>
                     2020
-                    </span>
+                </span>
             </div>
         </div>
-    )
+    );
 });
 
 export default Header;

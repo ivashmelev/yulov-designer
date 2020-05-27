@@ -11,17 +11,17 @@ const Root = () => {
             <Router history={history}>
                 <Switch>
                     <Route exact path="/" component={withRouter(App)} />
-                    {/*<Route exact path="*" component={withRouter(App)} />*/}
+                    {/* <Route exact path="*" component={withRouter(App)} /> */}
                     <Route exact path="/projects/:id">
                         <Project config={projects} />
                     </Route>
                     <Route path="/">
-                        <Redirect to='/' />
+                        <Redirect to="/" />
                     </Route>
                 </Switch>
             </Router>
         </>
-    )
-}
+    );
+};
 
 export default Root;
