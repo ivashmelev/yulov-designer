@@ -47,10 +47,10 @@
       }
 
       .reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover ~ .reflection-content {
-        transform: rotateX((($r * -5)+25deg)) rotateY((-25deg+ ($c * 5)));
+        transform: rotateX((($r * -3)+10deg)) rotateY((-15deg+ ($c * 3)));
 
         &:before {
-          transform: translateY(1 - (5% * $r));
+          transform: translateY(1 - (3% * $r));
         }
       }
     }

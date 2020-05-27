@@ -39,7 +39,8 @@ div > .wrapper {
 }
 
 .subtitle {
-  @extend .text_bold;
+  @extend .text;
+  font-size: 16px;
 }
 
 .content_wrapper {
