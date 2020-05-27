@@ -19,8 +19,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  top: 118px;
+  position: fixed;
+  right: 20px;
+  top: 217px;
 
   &:nth-child(2) {
     justify-content: space-evenly;
@@ -58,6 +59,7 @@
   // }
 
   .block {
+    position: relative;
     top: 0;
   }
 
