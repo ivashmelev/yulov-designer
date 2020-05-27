@@ -100,6 +100,22 @@
   }
 }
 
+@media only screen and (min-width: 0) and (max-width: 1270px) {
+  .wrapper {
+    max-width: 826px;
+  }
+
+  .title {
+    margin-top: 175px;
+    left: -11.4%;
+
+    &.right {
+      margin-top: 50px;
+      left: 56.6%;
+    }
+  }
+}
+
 @media only screen and (min-width: 0) and (max-width: 1080px) {
   .wrapper {
     max-width: 460px;
