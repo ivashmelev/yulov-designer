@@ -29,14 +29,14 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
                                 { title }&nbsp;
                             </span>
                             <span className={ styles.subtitle }>
-                                - { subtitle }
+                                — { subtitle }
                             </span>
                         </div>
                         <div className={ `${styles.description_wrapper} ${right && styles.right}` }>
                             <span className={ `${styles.description} ${right && styles.right}` }>
                                 { description }
                             </span>
-                            <div className={ styles.link_wrapper }>
+                            <div className={ `${styles.link_wrapper} ${right && styles.right}` }>
                                 <Link className={ `${styles.link} ` } to={ link }>
                                     Посмотреть проект >>
                                 </Link>
