@@ -313,6 +313,8 @@ div > .wrapper {
   }
 
   .link_wrapper {
+    position: relative;
+
     &.right {
       margin-left: 40px;
     }
@@ -333,6 +335,18 @@ div > .wrapper {
   }
 
   .link {
-    // display: none;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 87.5%;
+      height: 1px;
+      margin-top: 30px;
+      background-color: $black-color;
+    }
+
+    &.right:after {
+      left: -20px;
+      width: 107.7%;
+    }
   }
 }

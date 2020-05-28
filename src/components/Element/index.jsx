@@ -37,7 +37,7 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
                                 { description }
                             </span>
                             <div className={ `${styles.link_wrapper} ${right && styles.right}` }>
-                                <Link className={ `${styles.link} ` } to={ link }>
+                                <Link className={ `${styles.link} ${right && styles.right}` } to={ link }>
                                     Посмотреть проект >>
                                 </Link>
                             </div>
