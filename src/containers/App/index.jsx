@@ -12,6 +12,7 @@ import Contacts from "../Contacts";
 import contactsConfig from "../../configs/contacts-config";
 import './App.scss';
 import CreatedBy from '../../components/CreatedBy';
+import ButtonTop from '../../components/ButtonTop';
 
 const App = memo(() => {
 
@@ -30,6 +31,7 @@ const App = memo(() => {
                 <Navigation targets={[]} />
                 <Header />
                 <About />
+                <ButtonTop />
                 <div>
                     { list.map((element, index) => {
                         if (index % 2 === 0) {
