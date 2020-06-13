@@ -15,7 +15,7 @@ const Networks = memo(({ config, hide }) => {
             </span>
             <div className={styles.link_wrapper}>
                 {/* eslint-disable-next-line react/no-array-index-key */}
-                { config.map(({ title, url }, index) => <Link key={index} to={url}>{ title }</Link>) }
+                { config.map(({ title, url }, index) => <a key={index} target="_blank" href={url}>{ title }</a>) }
             </div>
             <div className={styles.line_wrapper}>
                 <div className={`${styles.line} ${hide && styles.hide}`} />

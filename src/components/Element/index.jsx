@@ -3,9 +3,9 @@ import styles from './Element.module.scss';
 import { Link } from "react-router-dom";
 import './animation_img.scss'
 import Networks from "../Networks";
-import networksConfig from "../../configs/networks-config";
+// import networksConfig from "../../configs/networks-config";
 
-const Element = memo(({ title, subtitle, index, img, description, right, link }) => {
+const Element = memo(({ title, subtitle, index, img, description, right, link, networks }) => {
 
     const [fragments] = useState(new Array(100).fill(null));
 
@@ -42,7 +42,7 @@ const Element = memo(({ title, subtitle, index, img, description, right, link })
                                 </Link>
                             </div>
                             <div className={ styles.soc_wrapper }>
-                                <Networks config={ networksConfig } />
+                                <Networks config={ networks } />
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import React, { memo } from "react";
-import styles from './Sidebar.module.scss';
 import { Link } from "react-router-dom";
+import styles from './Sidebar.module.scss';
 import arrowBack from '../../static/img/Arrow_back.svg';
 import slash from '../../static/img/slash.svg';
 import arrowForward from '../../static/img/Arrow_forward.svg';
@@ -15,7 +15,7 @@ const Sidebar = memo(({ id, length, description, fonts, colors, links, navigatio
         }
 
         return navigations[Number(index) + 1];
-    }
+    };
 
     const prev = () => {
         if (index === 0) {
@@ -23,12 +23,12 @@ const Sidebar = memo(({ id, length, description, fonts, colors, links, navigatio
         }
 
         return navigations[Number(index) - 1];
-    }
+    };
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.header}>
-                <Link to={`/`}>
+                <Link to="/">
                     На главную
                 </Link>
                 <div className={styles.nav}>
@@ -68,12 +68,12 @@ const Sidebar = memo(({ id, length, description, fonts, colors, links, navigatio
                     Доп. материалы
                 </span>
                 <div className={styles.links_wrapper}>
-                    {links.map(({ title, url }, index) => <Link to={url} key={index}>{title}</Link>)}
+                    { links.map(({ title, url }, index) => <a target="_blank" href={url} key={index}>{title}</a>)}
                 </div>
                 <div className={styles.line} />
             </div>
         </div>
-    )
+    );
 });
 
 export default Sidebar;

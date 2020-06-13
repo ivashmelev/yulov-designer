@@ -7,28 +7,6 @@ const Navigation = memo(() => {
 
     const [node, setNode] = useState('about');
 
-    useEffect(() => {
-        const labels = ['about', 'portfolio', 'contacts'];
-
-        window.addEventListener('scroll', () => {
-            labels.forEach((el, index, arr) => {
-
-                const target = document.querySelector(`#${el}`);
-                const nextTarget = document.querySelector(`#${arr[++index]}`);
-
-                if(nextTarget) {
-                    if (window.scrollY >= target.offsetTop && window.scrollY <= nextTarget.offsetTop) {
-                        setNode(el);
-                    }
-                }else {
-                    if (window.scrollY >= target.offsetTop) {
-                        setNode(el);
-                    }
-                }
-            });
-        });
-    });
-
     const scroll = (target) => {
         setNode(target);
         document.querySelector(`#${target}`).scrollIntoView({ behavior: 'smooth' });

@@ -1,6 +1,6 @@
-import React, { memo, useEffect, useState } from "react";
-import styles from './Project.module.scss';
+import React, { memo } from "react";
 import { useParams, Redirect } from 'react-router-dom';
+import styles from './Project.module.scss';
 import Sidebar from "../../components/Sidebar";
 
 const Project = memo(({ config }) => {
@@ -10,7 +10,7 @@ const Project = memo(({ config }) => {
     const navigations = config.map(el => el.name);
 
     if (!project) {
-        return <Redirect to={'/'} />
+        return <Redirect to="/" />;
     }
 
     const img = project.img;
@@ -22,14 +22,14 @@ const Project = memo(({ config }) => {
             </div>
             <div className={styles.block}>
                 <Sidebar
-                    id={id}
-                    length={config.length}
-                    navigations={navigations}
-                    {...project}
+                  id={id}
+                  length={config.length}
+                  navigations={navigations}
+                  {...project}
                 />
             </div>
         </div>
-    )
+    );
 });
 
 export default Project;

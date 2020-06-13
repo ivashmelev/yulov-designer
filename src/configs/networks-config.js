@@ -1,7 +1,7 @@
 const networksConfig = [
     {
         title: 'Behance',
-        url: '#'
+        url: 'vk.com'
     },
     {
         title: 'Instagram',
@@ -10,7 +10,7 @@ const networksConfig = [
     {
         title: 'vk.com',
         url: '#'
-    },
+    }
 ];
 
 export default networksConfig;
