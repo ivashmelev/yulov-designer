@@ -1,36 +1,24 @@
 @import "../../UI.module.scss";
 
 .wrapper {
-    width: 8vh;
-    height: 8vh;
-    border-radius: 50%;
-    background-color: $white-color;
+    width: 30px;
+    height: 30px;
     position: fixed;
     bottom: 50px;
     right: 30px;
     z-index: 999999;
     display: none;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(-90deg);
-    border: 3px dashed $black-color;
     cursor: pointer;
     box-sizing: border-box;
     transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1);
+    background: url("../../static/img/arrow_top.png"), no-repeat fixed center;
 
     &.active {
         display: flex;
     }
 
     &:hover {
-        background-color: $purple-color;
-        border: 0px;
-    }
-
-    & svg > g {
-        fill: $black-color;
-    }
-    &:hover svg > g {
-        fill: $white-color;
+        transition: 0.3s all cubic-bezier(0.77, 0, 0.175, 1);
+        background: url("../../static/img/arrow_top_hover.png"), no-repeat fixed center;
     }
 }

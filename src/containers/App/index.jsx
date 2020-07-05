@@ -31,7 +31,6 @@ const App = memo(() => {
                 <Navigation targets={[]} />
                 <Header />
                 <About />
-                <ButtonTop />
                 <div>
                     { list.map((element, index) => {
                         if (index % 2 === 0) {

@@ -1,7 +1,7 @@
 @import "../../UI.module";
 
 .wrapper {
-  background-color: $purple-color;
+  background-color: $white-color;
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -68,7 +68,7 @@
     margin-right: 20px;
 
     &:hover {
-      color: $white-color;
+      color: $purple-color;
 
       &:after {
         width: 0;

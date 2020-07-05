@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { useParams, Redirect } from 'react-router-dom';
 import styles from './Project.module.scss';
 import Sidebar from "../../components/Sidebar";
+import ButtonTop from "../../components/ButtonTop";
 
 const Project = memo(({ config }) => {
 
@@ -14,21 +15,23 @@ const Project = memo(({ config }) => {
     }
 
     const img = project.img;
-
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.block}>
-                <img src={img} />
+        <>
+            <div className={styles.wrapper}>
+                <div className={styles.block}>
+                    <img src={img} />
+                </div>
+                <div className={styles.block}>
+                    <Sidebar
+                      id={id}
+                      length={config.length}
+                      navigations={navigations}
+                      {...project}
+                    />
+                </div>
             </div>
-            <div className={styles.block}>
-                <Sidebar
-                  id={id}
-                  length={config.length}
-                  navigations={navigations}
-                  {...project}
-                />
-            </div>
-        </div>
+            <ButtonTop />
+        </>
     );
 });
 
