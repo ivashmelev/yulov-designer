@@ -32,11 +32,11 @@ const Sidebar = memo(({ id, length, description, fonts, colors, links, navigatio
                     На главную
                 </Link>
                 <div className={styles.nav}>
-                    <Link to={`/projects/${next()}`}>
+                    <Link to={`/projects/${prev()}`}>
                         <img src={arrowBack} />
                     </Link>
                     <img src={slash} />
-                    <Link to={`/projects/${prev()}`}>
+                    <Link to={`/projects/${next()}`}>
                         <img src={arrowForward} />
                     </Link>
                 </div>

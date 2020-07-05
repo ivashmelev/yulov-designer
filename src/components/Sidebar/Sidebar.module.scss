@@ -69,12 +69,12 @@
 
     &:hover {
       color: $purple-color;
-
-      &:after {
-        width: 0;
-      }
     }
   }
+}
+
+a:hover::after {
+  width: 0;
 }
 
 .line {
